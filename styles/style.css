@@ -3,6 +3,8 @@
   font-family: "Poppins", sans-serif;
 }
 
+/* navbar */
+
 nav {
   display: flex;
   justify-content: space-between;
@@ -11,11 +13,14 @@ nav {
   margin-right: 40px;
 }
 
+/* navbar logo */
+
 .logo {
-    display: flex;
-    align-items: center;    
-    font-weight: 600;
-    gap: 25px;
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+  gap: 25px;
+  font-size: 24px;
 }
 
 .navbar-content {
@@ -36,13 +41,15 @@ nav li a:hover {
 }
 
 nav i {
-    margin-left: 2px;
-    color: red;
+  margin-left: 2px;
+  color: red;
 }
+
+/* dropdown menu */
 
 .navbar-dropdown {
   position: relative;
-  display: inline-block;
+  display: block;
   cursor: pointer;
 }
 
@@ -70,6 +77,8 @@ nav i {
   display: block;
 }
 
+/* text top right */
+
 .text-right {
   position: absolute;
   top: 0px;
@@ -87,5 +96,13 @@ nav i {
 
 .text-right a:hover {
   text-decoration: underline;
-  color: red;   
+  color: red;
+}
+
+/* navbar underline */
+
+.navbar-underline {
+  background-color: red;
+  height: 20px;
+  width: 100%;
 }
