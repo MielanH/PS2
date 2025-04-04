@@ -1,6 +1,8 @@
 * {
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
 /* navbar */
@@ -68,6 +70,17 @@ nav i {
   z-index: 1;
 }
 
+.navbar-dropdown-content li {
+  list-style-type: none;
+  text-decoration: none;
+  padding: 5px 0;
+  border-bottom: 1px solid black;
+}
+
+.navbar-dropdown-content li:last-child {
+  border-bottom: none;
+}
+
 .navbar-content li {
   list-style-type: none;
   text-decoration: none;
@@ -107,32 +120,67 @@ nav i {
   width: 100%;
 }
 
+/* Responsive styles */
+
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px;
+  }
+
+  .logo {
+    font-size: 20px;
+    gap: 15px;
+  }
+
+  .navbar-content {
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+  }
+
+  .navbar-dropdown-content {
+    min-width: 100px;
+  }
+
+  .text-right {
+    position: static;
+    margin-top: 10px;
+    width: 100%;
+  }
+
+  .text-right ul {
+    justify-content: space-between;
+    gap: 10px;
+  }
+}
+
 /* footer */
 
 footer {
   background-color: #ffffff;
   padding: 70px 0;
-  left: 0;
-  bottom: 0;
   width: 100%;
   border-top-left-radius: 2%;
-  border-top-left-radius: 2%;
+  border-top-right-radius: 2%;
 }
 
 .container-footer {
   max-width: 95%;
   margin: auto;
-  list-style-type: none;
 }
 
 .row-footer {
   display: flex;
-  flex-wrap: no-wrap;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 .footer-col {
-  width: 20%;
-  padding: 0px 15px;
+  width: 100%;
+  padding: 0 15px;
+  margin-bottom: 20px;
 }
 
 .footer-col h5 {
@@ -146,15 +194,20 @@ footer {
   content: "";
   position: absolute;
   left: 0;
-  background-color: red;
   bottom: -10px;
   height: 4px;
   width: 130px;
+  background-color: red;
+}
+
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 .footer-col ul li {
   margin-bottom: 10px;
-  list-style-type: none;
 }
 
 .footer-col ul li a {
@@ -173,58 +226,214 @@ footer {
   display: inline-block;
   height: 40px;
   width: 40px;
-  border: 1px solid black;
   margin: 0 10px 10px 0;
   text-align: center;
   line-height: 40px;
+  border: 1px solid black;
   border-radius: 50%;
   color: black;
-  transition: all 0.3s ease;
 }
 
 .footer-col .social-links a:hover {
   color: white;
   background-color: red;
-  border: 1px solid red;
+  border-color: red;
 }
 
 p.copyright {
-  position: relative;
   font-weight: bold;
-  width: 100%;
-  line-height: 40px;
   text-align: center;
-  bottom: 0;
+  line-height: 40px;
+  margin: 0;
+}
+
+@media (min-width: 768px) {
+  .row-footer {
+    flex-wrap: nowrap;
+  }
+
+  .footer-col {
+    width: 20%;
+    margin-bottom: 0;
+  }
+
+  .footer-col img,
+  .footer-col i {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.index-header {
+  background-color: black;
+  width: 100%;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.index-header img {
+  max-width: 100%;
+  max-height: 100%;
 }
 
 h1 {
   font-size: 34px;
   text-align: center;
-  margin-top: 5%;
+  margin: 5% 0%;
 }
 
 p {
-  padding: 3%;
   line-height: 30px;
 }
+
+/* agenda-pages */
 
 .img-agenda {
   margin: auto;
   text-align: center;
 }
 
+@media (max-width: 768px) {
+  .img-agenda img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+/* reusable gridtemplate */
+
 .img-pages {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  margin: 20px 20px;
+  margin: 30px 20px;
 }
 
-.img-margin {
-  margin: 20px 20px;
+@media (max-width: 768px) {
+  .img-pages {
+    grid-template-columns: 1fr;
+    margin: 20px 10px;
+  }
+
+  .img-pages img {
+    width: 100%;
+    height: auto;
+  }
 }
 
 figcaption {
   font-style: italic;
+}
+
+/* Homepage */
+
+.homepage-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+  margin: 0% 15px;
+}
+
+.homepage-content {
+  display: inline-block;
+}
+
+.button-engels {
+  display: block;
+  margin: 5% 0%;
+  font-size: 16px;
+  font-weight: 600;
+  color: blue;
+  background-color: white;
+  border: 2px solid blue;
+  border-radius: 15px;
+  padding: 10px 20px;
+  text-decoration: none;
+  position: relative;
+  cursor: pointer;
+}
+
+.button-nederlands {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 5% auto;
+  font-size: 16px;
+  font-weight: 600;
+  color: black;
+  background-color: white;
+  border: 2px solid black;
+  border-radius: 15px;
+  padding: 10px 20px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.button-frans {
+  display: block;
+  float: right;
+  margin: 5% 0%;
+  font-size: 16px;
+  font-weight: 600;
+  color: red;
+  background-color: white;
+  border: 2px solid red;
+  border-radius: 15px;
+  padding: 10px 20px;
+  text-decoration: none;
+  position: relative;
+  cursor: pointer;
+}
+
+.button-engels:hover,
+.button-nederlands:hover,
+.button-frans:hover {
+  text-decoration: underline;
+}
+.nieuws {
+  margin: 0% 15px;
+}
+
+.nieuws-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.left-section,
+.right-section {
+  flex: 1;
+}
+
+.nieuws-item {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+  .nieuws-container {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .nieuws-item {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .homepage-container {
+    grid-template-columns: 1fr;
+  }
+
+  .button-frans,
+  .button-nederlands {
+    display: flex;
+    float: left;
+  }
 }
 
 p.engels {
@@ -233,4 +442,80 @@ p.engels {
 
 p.frans {
   color: red;
+}
+
+/* sport-pages */
+
+.sport-container {
+  margin: 0% 2%;
+}
+
+.sport-image-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.sport-container h2 {
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+.sport-inleiding {
+  width: 100%;
+  font-weight: 500;
+}
+
+@media (min-width: 768px) {
+  .sport-inleiding {
+    width: 40%;
+  }
+}
+
+.sport-p-judo {
+  display: grid;
+  grid-template-columns: 1fr;
+  margin: 2% 0%;
+  gap: 20px;
+}
+
+@media (min-width: 768px) {
+  .sport-p-judo {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.sport-image {
+  width: 60%;
+  height: auto;
+}
+
+@media (max-width: 768px) {
+  .sport-image {
+    width: 100%;
+  }
+
+  .fig-contact {
+    margin: 4% 0%;
+  }
+}
+
+.sport-p-jiujitsu {
+  display: flex;
+  width: 90%;
+  gap: 5%;
+  margin-top: 2%;
+}
+
+@media (max-width: 768px) {
+  .sport-p-jiujitsu {
+    flex-direction: column;
+    width: 100%;
+    gap: 20px;
+    margin-left: 0;
+  }
+}
+
+.info-p {
+  margin: 0% 2%;
 }
