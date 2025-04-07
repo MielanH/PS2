@@ -70,32 +70,66 @@
       </div>
     </nav>
     <hr class="navbar-underline" />
-    <h1>Examen</h1>
-    <div class="img-pages">
-      <img src="../images/examen.png" alt="Examen" width="800px" />
-      <p>
-        Tweemaal per jaar organiseren wij examens, in januari en in juni. Op een
-        examen laat je zien welke technieken en oefeningen je allemaal geleerd
-        hebt. <br />
-        <img
-          src="../images/examen-gif.gif"
-          alt="examen-gif"
-          style="display: flex; float: right"
-          width="400px"
-        />
-        Dat doe je samen met iemand waarmee je goed kunt judoën, die dus
-        ongeveer even groot, even lang etc. is. <br /><br />Een examinator
-        beoordeelt je examen en beloont je eventueel met een volgende band of
-        slip. De uitslag van het examen is afhankelijk van de gevorderdheid maar
-        ook van de leeftijd. <br /><br />Jongere judoka's maken maximaal 1
-        stapje per examen, bv. van 1 naar 2. Oudere judoka's kunnen stappen
-        overslaan, bv. van 2 naar 4. <br /><br />De gevorderdheid bepaalt of dit maximale
-        aantal stapjes ook daadwerkelijk gemaakt wordt. Ongeacht de leeftijd, de
-        huidige band en slip en de gevorderdheid is het maximale resultaat
-        altijd de volgende hele band. Hieronder zie je de volgorde van alle
-        banden en slippen.
-      </p>
-    </div>
+    <h1>Registration Form</h1>
+    <p class="form-p">
+      <b
+        >PLEASE FILL IN THE DETAILS OF THE PERSON WHO WISHES TO PARTICIPATE IN
+        SPORTS!</b
+      ><br />
+      I am interested in playing sports at the Benoordenhoutse Judoschool and
+      would like to be informed about the possibilities. I would like to receive
+      more information about the registration procedure and the possibility of
+      taking a free trial lesson. It does not obligate me to anything.
+    </p>
+    <form action="bedankten.html" method="post">
+      <label for="voornaam">First Name</label>
+      <input
+        type="text"
+        name="voornaam"
+        id="voornaam"
+        required
+        maxlength="50"
+      />
+      <label for="achternaam">Last Name</label>
+      <input
+        type="text"
+        name="achternaam"
+        id="achternaam"
+        required
+        maxlength="50"
+      />
+      <label for="telefoon">Phone Number</label>
+      <input
+        type="tel"
+        name="telefoon"
+        id="telefoon"
+        required
+        pattern="[0-9]{10}"
+        maxlength="10"
+      />
+      <label for="email">Email</label>
+      <input type="email" name="email" id="email" required maxlength="100" />
+      <label for="straathuis">Street + Housenumber</label>
+      <input type="text" name="straathuis" id="straathuis" maxlength="100" />
+      <label for="stad">City</label>
+      <input type="text" name="stad" id="stad" maxlength="50" />
+      <label for="postcode">Zipcode</label>
+      <input
+        type="text"
+        name="postcode"
+        id="postcode"
+        pattern="[0-9]{4}\s?[A-Z]{2}"
+        maxlength="7"
+      />
+      <label for="datum">Date</label>
+      <input type="date" name="datum" id="datum" required />
+      <label for="vechtsport"
+        >What sport do you want to do? Have you done a martial art before, what
+        belt did you get?</label
+      >
+      <textarea name="vechtsport" id="vechtsport" maxlength="500"></textarea>
+      <input type="submit" value="Send" />
+    </form>
   </body>
   <footer>
     <div class="container-footer">

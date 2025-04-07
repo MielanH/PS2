@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="refresh" content="5; index.html" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -70,32 +71,23 @@
       </div>
     </nav>
     <hr class="navbar-underline" />
-    <h1>Examen</h1>
-    <div class="img-pages">
-      <img src="../images/examen.png" alt="Examen" width="800px" />
-      <p>
-        Tweemaal per jaar organiseren wij examens, in januari en in juni. Op een
-        examen laat je zien welke technieken en oefeningen je allemaal geleerd
-        hebt. <br />
-        <img
-          src="../images/examen-gif.gif"
-          alt="examen-gif"
-          style="display: flex; float: right"
-          width="400px"
-        />
-        Dat doe je samen met iemand waarmee je goed kunt judoën, die dus
-        ongeveer even groot, even lang etc. is. <br /><br />Een examinator
-        beoordeelt je examen en beloont je eventueel met een volgende band of
-        slip. De uitslag van het examen is afhankelijk van de gevorderdheid maar
-        ook van de leeftijd. <br /><br />Jongere judoka's maken maximaal 1
-        stapje per examen, bv. van 1 naar 2. Oudere judoka's kunnen stappen
-        overslaan, bv. van 2 naar 4. <br /><br />De gevorderdheid bepaalt of dit maximale
-        aantal stapjes ook daadwerkelijk gemaakt wordt. Ongeacht de leeftijd, de
-        huidige band en slip en de gevorderdheid is het maximale resultaat
-        altijd de volgende hele band. Hieronder zie je de volgorde van alle
-        banden en slippen.
-      </p>
-    </div>
+    <h1>Thank you, we will contact you shortly!</h1>
+
+<!-- Dit is door AI gemaakt! -->
+    <p class="form-p">You will be returned to the main page about <span id="countdown">5</span>s!</p>
+    <script>
+      let countdownElement = document.getElementById('countdown');
+      let countdownValue = 5;
+
+      const countdownInterval = setInterval(() => {
+        countdownValue--;
+        countdownElement.textContent = countdownValue;
+        if (countdownValue <= 0) {
+          clearInterval(countdownInterval);
+        }
+      }, 1000);
+    </script>
+<!-- einde AI -->
   </body>
   <footer>
     <div class="container-footer">
