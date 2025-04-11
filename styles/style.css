@@ -25,6 +25,11 @@ nav {
   font-size: 24px;
 }
 
+.navtitle {
+  text-decoration: none;
+  color: black;
+}
+
 .navbar-content {
   display: flex;
   gap: 40px;
